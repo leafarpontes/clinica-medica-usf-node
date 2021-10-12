@@ -1,0 +1,9 @@
+.form-cadastro {
+    width: 50%;
+    min-width: 340px;
+    margin: 0 auto;
+}
+
+#main-cad-usuario h4 {
+    color: #006b2d;
+}

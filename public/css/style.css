@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    height: 80px;
+}
+
+header p {
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #006b2d;
+    font-weight: bold;
+    margin: 0;
+    margin-right: 8px;
+}
+
+.main-listar-func h4 {
+    color: #006b2d;
+}
+
+.main-listar-paciente h4 {
+    color: #006b2d;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/cadastrarUsuario.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro de Funcionários</title>
+</head>
+
+<body>
+    <%- include('../partials/header'); %>
+    <main id="main-cad-usuario">
+        <h4 class="text-center my-4">Cadastro de Funcionários</h4>
+        <form action="/cadastrarFuncionario" method="POST" class="form-cadastro mb-4">
+            <div class="row">
+                <div class="form-group col">
+                    <label for="emailFunc">E-mail</label>
+                    <input type="email" class="form-control" id="emailFunc" name="emailFunc">
+                </div>
+                <div class="form-group col">
+                    <label for="senhaFunc">Senha</label>
+                    <input type="password" class="form-control" id="senhaFunc" name="senhaFunc">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nomeFunc">Nome completo</label>
+                <input type="text" class="form-control" id="nomeFunc" name="nomeFunc">
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="cpfFunc">CPF</label>
+                    <input type="text" class="form-control" id="cpfFunc" name="cpfFunc">
+                </div>
+                <div class="form-group col">
+                    <label for="celularFunc">Celular</label>
+                    <input type="text" class="form-control" id="celularFunc" name="celularFunc">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="dataNascFunc">Data de nascimento</label>
+                    <input type="date" class="form-control" id="dataNascFunc" name="dataNascFunc">
+                </div>
+                <div class="form-group col">
+                    <label for="sexoFunc">Sexo</label>
+                    <select class="custom-select" name="sexoFunc" id="sexoFunc">
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                        <option value="O">Outro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="cargoFunc">Cargo</label>
+                    <input type="text" class="form-control" id="cargoFunc" name="cargoFunc">
+                </div>
+                <div class="form-group col">
+                    <label for="registroFunc">Registro</label>
+                    <input type="text" class="form-control" id="registroFunc" name="registroFunc">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="cepFunc">CEP</label>
+                    <input type="text" class="form-control" id="cepFunc" name="cepFunc">
+                </div>
+                <div class="form-group col">
+                    <label for="logradouroFunc">Logradouro</label>
+                    <input type="text" class="form-control" id="logradouroFunc" name="logradouroFunc">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="numeroFunc">Nº</label>
+                    <input type="text" class="form-control" id="numeroFunc" name="numeroFunc">
+                </div>
+                <div class="form-group col">
+                    <label for="complementoFunc">Complemento</label>
+                    <input type="text" class="form-control" id="complementoFunc" name="complementoFunc">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+        </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
