@@ -1,7 +1,8 @@
-// importando express e mongoose/mysql
+// importando express
 const express = require('express');
 const app = express();
-// const mongoose = require('mongoose');
+
+// importando as rotas do arquivo cadastroRouters.js
 const cadastroRouters = require('./routers/cadastroRouters');
 
 // setando a porta de conexão
@@ -16,13 +17,10 @@ app.use(express.json());
 // configurar o projeto para usar a pasta public
 app.use(express.static('public'));
 
-// teste página inicial
-app.get('/', (req, res) => {
-    res.send('página inicial');
-})
-
+// usando as rotas nas páginas
 app.use('/', cadastroRouters);
 
+// App escutando na porta 3000
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 })

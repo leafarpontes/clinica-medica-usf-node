@@ -8,17 +8,17 @@ var con = mysql.createConnection({
     database: "clinica_medica"
 });
 
-// rota GET para a página de cadastro de usuário
+// Função GET para a página de cadastro de usuário
 exports.cadastrarUsuarioGet = (req, res) => {
     res.render('views/pages/cadastrarUsuario');
 }
 
-// rota GET para a página de cadastro de funcionários
+// Função GET para a página de cadastro de funcionários
 exports.cadastrarFuncionarioGet = (req, res) => {
     res.render('views/pages/cadastrarFuncionario');
 }
 
-// rota POST para a página de cadastro de usuários
+// Função POST da página de cadastrar pacientes
 exports.cadastrarUsuarioPost = (req, res) => {
     let email = req.body.emailUser;
     let senha = req.body.senhaUser;
@@ -40,7 +40,7 @@ exports.cadastrarUsuarioPost = (req, res) => {
     
 }
 
-// rota POST para a página de cadastro de usuários
+// Função POST da página de cadastrar funcionários
 exports.cadastrarFuncionarioPost = (req, res) => {
     let email = req.body.emailFunc;
     let senha = req.body.senhaFunc;
@@ -65,6 +65,7 @@ exports.cadastrarFuncionarioPost = (req, res) => {
     
 }
 
+// Função GET da página de listar funcionários
 exports.listarFuncionariosGet = (req, res) => {
     con.query('SELECT * FROM funcionarios', (err, funcionarios) => {
         if (err) throw err;
@@ -72,6 +73,7 @@ exports.listarFuncionariosGet = (req, res) => {
     })
 }
 
+// Função GET da página de listar pacientes
 exports.listarPacientesGet = (req, res) => {
     con.query('SELECT * FROM pacientes', (err, pacientes) => {
         if (err) throw err;
